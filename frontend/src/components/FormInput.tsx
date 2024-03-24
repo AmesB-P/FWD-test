@@ -39,10 +39,9 @@ const FormInput : FC = () => {
                 dob : selectedDate.startDate
             }
 
-            console.log("API_URL" , process.env)
             const res = await axios.post(`https://api.fwd.co.th/dev-ecommerce/getProduct/` , newData)
 
-            console.log("res" , res)
+
             if(!res.data.code){
                 dispatch(resultFormAction(res.data))
                 navigate("/Result_form")
@@ -189,7 +188,7 @@ const FormInput : FC = () => {
 
                     <div className={`col-span-full`}>
                         <label htmlFor="gender" className="block text-sm font-medium leading-6 text-gray-900">
-                            <span className={'text-red-600'}>* </span> เบี้ยประกัน
+                            เบี้ยประกัน
                         </label>
 
                         <div className="relative mt-2 rounded-md shadow-sm">

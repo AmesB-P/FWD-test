@@ -1,6 +1,7 @@
 import React, {FC} from "react";
 import Card from "./card"
 import {useAppSelector} from "../hooks/reduxHooks";
+import {Link} from "react-router-dom";
 const ResultForm : FC = () => {
 
     const benefitData = useAppSelector(({benefit}) => benefit)
@@ -41,6 +42,12 @@ const ResultForm : FC = () => {
 
                             </tbody>
                         </table>
+                    </div>
+
+                    <div className={"col-span-full flex justify-center"}>
+                        <Link to={"/Home"} className={"rounded-lg bg-teal-300 p-4 text-white"}>
+                            Back
+                        </Link>
                     </div>
 
 
